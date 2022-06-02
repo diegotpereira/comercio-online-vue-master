@@ -1,12 +1,12 @@
-import state from './state';
+import state from "./state";
 import * as getters from './getters'
-import * as mutations from './mutations'
 import * as actions from './actions'
+import * as mutaions from './mutations'
 
 export default {
     namespaced: true,
     getters,
-    mutations,
     actions,
-    state   
+    mutaions,
+    state
 }

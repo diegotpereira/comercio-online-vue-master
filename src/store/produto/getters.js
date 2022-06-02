@@ -1,6 +1,6 @@
 import state from "./state"
 
-export default produtos (state) {
+export function produtos (state) {
     return state.produtos
 }
 export function produto (state) {

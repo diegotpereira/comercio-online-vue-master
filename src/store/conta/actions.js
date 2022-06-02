@@ -1,11 +1,10 @@
 import router from '../../router'
 import Axios from 'axios'
-import axios from 'axios'
 
 export function login({ commit }) {
     let url = 'https://randomuser.me/api/'
 
-    axios.get(url).then(function (response) {
+    Axios.get(url).then(function (response) {
         let usuarioDado = {
             displayNome: response.data.results[0].name.first,
             email: response.data.results[0].email,

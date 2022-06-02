@@ -1,4 +1,4 @@
-export default setProdutos(state, val) {
+export function setProdutos(state, val) {
     state.produtos = val 
 }
 export function setProduto(state, val) {

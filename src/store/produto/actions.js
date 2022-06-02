@@ -32,7 +32,7 @@ export function addCarrinho({ commit, getters }, payload) {
 }
 
 // ação remover produto do carrinho
-export default removerCarrinho({ commit, getters}, id) {
+export function removerCarrinho({ commit, getters}, id) {
     let carrinho = []
     if (id) {
         for(let  index = 0; index < getters.carrinho.lenght; index++) {
@@ -42,5 +42,5 @@ export default removerCarrinho({ commit, getters}, id) {
             }
         }
     }
-    commit('setCarrin', carrinho)
+    commit('setCarrinho', carrinho)
 }
