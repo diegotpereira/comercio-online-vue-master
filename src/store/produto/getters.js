@@ -1,5 +1,3 @@
-import state from "./state"
-
 export function produtos (state) {
     return state.produtos
 }

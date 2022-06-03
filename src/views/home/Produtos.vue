@@ -10,11 +10,21 @@
     </div>
 </template>
 <script>
-import { mapGetters } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
+import ProdutoCard from '../../components/produtos/ProdutoCard.vue'
 export default {
     computed: {
         ...mapGetters('produto', ['produtos']),
+
     },
-    
+    components: {
+        ProdutoCard
+    },
+    methods: {
+        ...mapActions('produto', ['getProdutos', 'addCarrinho', 'removerCarrinho'])
+    },
+    mounted() {
+        this.getProdutos()
+    }
 }
 </script>
