@@ -9,7 +9,7 @@
                         <img :src="usuario.fotoUrl"  alt="" class="img-thumbnail profile-image" />
                         <router-link class="btn btn-primary my-2 my-sm-0" to="/carrinho">
                            <img src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG38.png" alt="" width="50">
-                           <span class="badge badge-danger badge-pill"></span>
+                           <span class="badge badge-danger badge-pill">{{ carrinho.length }}</span>
                         </router-link>
                     </div>
                     <router-link class="btn btn-primary my-2 my-sm-0" to="/login">Entrar</router-link>

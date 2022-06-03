@@ -8,7 +8,7 @@ export function login({ commit }) {
         let usuarioDado = {
             displayNome: response.data.results[0].name.first,
             email: response.data.results[0].email,
-            fotoUrl: response.data.results[0].thumnail,
+            fotoUrl: response.data.results[0].picture.thumbnail,
             uid: response.data.results[0].login.uuid
         }
         commit('setUsuarioDado', usuarioDado)

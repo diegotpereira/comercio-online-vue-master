@@ -6,8 +6,6 @@ export function getProdutos({ commit }) {
     axios.get(url)
     .then((response)=> {
         commit('setProdutos', response.data)
-        console.log(response);
-        console.log("setProdutos");
     })
     .catch(error => {
         console.log(error);
@@ -20,8 +18,6 @@ export function produtoDetalhes({ commit, id }) {
     axios.get(url, { params: {id: id}})
     .then((response) => {
         commit('setProduto', response.data[0])
-        console.log(response);
-        console.log("setProduto");
     })
     .catch(function(error) {
         console.log(error);
@@ -31,6 +27,8 @@ export function produtoDetalhes({ commit, id }) {
 // ação adionar produto ao carrinho
 export function addCarrinho({ commit, getters }, payload) {
     let carrinho = getters.carrinho
+    let data = payload.produto
+    data['quantidade'] = payload.quantidade
     carrinho.push(payload)
     commit('setCarrinho', carrinho)
 }

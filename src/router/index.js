@@ -13,6 +13,9 @@ const routes = [
             },
             {
                 path: 'detalhes/:idProduto', component: () => import ('../views/home/Detalhes.vue')
+            },
+            {
+                path: '/carrinho', component: () => import('../views/home/Carrinho')
             }
         ]
     },

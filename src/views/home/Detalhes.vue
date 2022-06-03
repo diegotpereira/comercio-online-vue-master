@@ -13,19 +13,22 @@
                     <p class="h3">Preço</p>
                     <p class="h2">R$ {{ produto.price }}</p>
                 </div>
+                <AddNoCarrinho :produto="produto" v-if="usuario.uid" />
             </div>
         </div>
     </div>
 </template>
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import AddNoCarrinho from '../../components/detalhes/AddNoCarrinho'
 export default {
     data() {
         return {
-
+            estaNoCardProp: false
         }
     },
     computed: {
+        ...mapGetters('conta', ['usuario']),
         ...mapGetters('produto', ['produto'])
     },
     methods: {
@@ -33,6 +36,9 @@ export default {
     },
     mounted() {
         this.produtoDetalhes(this.$route.params.idProduto)
+    },
+    components: {
+        AddNoCarrinho
     }
 }
 </script>
