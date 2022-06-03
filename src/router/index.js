@@ -10,6 +10,9 @@ const routes = [
         children: [
             {
                 path: '', component: () => import('../views/home/Produtos.vue')
+            },
+            {
+                path: 'detalhes/:idProduto', component: () => import ('../views/home/Detalhes.vue')
             }
         ]
     },
